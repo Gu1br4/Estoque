@@ -1,9 +1,16 @@
-item = input("Item que deseja vender: ")
+
+
+item = str(input("Item que deseja vender: "))
+cod  = int(input("Coloque o código do produto:"))
+desc = str(input("Descrição do produto:"))
 cp = float(input("Custo do produto: "))
 cf = float(input("Porcentagem de custo fixo: "))
 cv = float(input("Porcentagem de comissão de vendas: "))
 iv = float(input("Porcentagem de imposto de venda: "))
 ml = float(input("Porcentagem de margem de lucro: "))
+
+
+
 
 cfp = cf / 100
 cvp = cv / 100
@@ -26,18 +33,21 @@ I = cp * (cfp + cvp + ivp)
 
 pcp=(cp/pv)*100
 
-print(f"O preço de venda deverá ser: {pv}, a porcentagem é:{A}")
-print(f"O custo de aquisição foi: {cp}, a porcentagem é:{B}")
-print(f"A receita bruta é: {C}, a porcentagem é:{CP}")
-print(f"O custo fixo é: {D}, a porcentagem é:{cf}")
-print(f"O valor de comissão é:{E}, a porcentagem é:{cv}")
-print(f"O imposto de venda é:{F} a porcentagem é:{iv}")
-print(f"Os outros custos são: {G}, a porcentagem é:{GP}")
-print(f"A rentabilidade é: {H}, a porcentagem é: {HP}")
+print(f"--------------------------------------------")
+print(f"DESCRIÇÕES |  VALORES |  PORCENTAGEM")
+print(f"preço de venda | {pv} | {A}")
+print(f"custo de aquisição | {cp} | {B}")
+print(f"receita bruta | {C} | {CP}")
+print(f"custo fixo | {D} | {cf}")
+print(f"valor de comissão | {E} | {cv}")
+print(f"imposto de venda | {F} | {iv}")
+print(f"outros custos são | {G} | {GP}")
+print(f"rentabilidade | {H} | {HP}")
+print(f"--------------------------------------------")
 
-if H >= 0.2 * pv:
+if H > 0.2 * pv:
     print("O lucro é alto")
-elif 0.1 * pv <= H < 0.2 * pv:
+elif 0.1 * pv <= H <= 0.2 * pv:
     print("O lucro é médio")
 elif 0 < H < 0.1 * pv:
     print("O lucro é baixo")
