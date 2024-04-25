@@ -20,3 +20,11 @@ resultado = cursor.fetchall()
 print(resultado)
 cursor.close()
 conexao.close()
+
+
+
+
+
+#from tabulate import tabulate
+#print(tabulate(resultado, headers='keys', tablefmt='psql'))
+#^^^^^para fazer tabela
